@@ -71,7 +71,7 @@ const Home = () => {
                   className={classes.paper}
                   category='VIDEOS'
                   title='YouTube Videos'
-                  description='HTML crash courses from YouTube'
+                  description='HTML tutorials from YouTube'
                 />
               </Paper>
               <Paper className={classes.control} square={true}>
@@ -126,7 +126,7 @@ const Home = () => {
                   className={classes.paper}
                   category='VIDEOS'
                   title='YouTube Videos'
-                  description='CSS crash courses from YouTube'
+                  description='CSS tutorials from YouTube'
                 />
               </Paper>
               <Paper className={classes.control} square={true}>
@@ -181,7 +181,7 @@ const Home = () => {
                   className={classes.paper}
                   category='VIDEOS'
                   title='YouTube Videos'
-                  description='JavaScript crash courses from YouTube'
+                  description='JavaScript tutorials from YouTube'
                 />
               </Paper>
               <Paper className={classes.control} square={true}>
