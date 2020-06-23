@@ -5,6 +5,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -26,6 +27,11 @@ const useStyles = makeStyles({
     marginBottom: 12,
   },
   buttonStyle: {
+    display: 'block',
+    width: '100%',
+  },
+  linkStyle: {
+    textDecoration: 'none',
     width: '100%',
   },
 });
@@ -48,14 +54,16 @@ export default function OutlinedCard(props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button
-          size='large'
-          variant='outlined'
-          color='primary'
-          className={classes.buttonStyle}
-        >
-          Let's Go!
-        </Button>
+        <Link to={props.link} className={classes.linkStyle}>
+          <Button
+            size='large'
+            variant='outlined'
+            color='primary'
+            className={classes.buttonStyle}
+          >
+            Let's Go!
+          </Button>
+        </Link>
       </CardActions>
     </Card>
   );

@@ -24,6 +24,8 @@ import {
   faJsSquare,
 } from '@fortawesome/free-brands-svg-icons';
 
+import { Link } from 'react-router-dom';
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -33,6 +35,10 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
+  },
+  linkStyle: {
+    textDecoration: 'none',
+    color: theme.palette.text.primary,
   },
 }));
 
@@ -54,9 +60,11 @@ const Navbar = () => {
       <AppBar position='sticky' color='inherit'>
         <Toolbar variant='dense'>
           <Container maxWidth='xl'>
-            <Typography variant='h6' color='inherit' noWrap>
-              START CODING HERE
-            </Typography>
+            <Link to='/' className={classes.linkStyle}>
+              <Typography variant='h6' color='inherit' noWrap>
+                START CODING HERE
+              </Typography>
+            </Link>
           </Container>
           <IconButton
             edge='start'
@@ -88,13 +96,13 @@ const Navbar = () => {
             <ListItemIcon>
               <FontAwesomeIcon icon={faHtml5} />
             </ListItemIcon>
-            <ListItemText primary='HTML5' />
+            <ListItemText primary='HTML' />
           </ListItem>
           <ListItem button>
             <ListItemIcon>
               <FontAwesomeIcon icon={faCss3Alt} />
             </ListItemIcon>
-            <ListItemText primary='CSS3' />
+            <ListItemText primary='CSS' />
           </ListItem>
           <ListItem button>
             <ListItemIcon>

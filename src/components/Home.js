@@ -6,6 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Card from './Card';
 import Link from '@material-ui/core/Link';
+import { Link as RouterLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,6 +29,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'block',
     textAlign: 'center',
   },
+  routerLinkStyle: {
+    textDecoration: 'none',
+    color: theme.palette.text.secondary,
+  },
 }));
 
 const Home = () => {
@@ -37,15 +42,19 @@ const Home = () => {
       <Container maxWidth='lg'>
         <Grid container className={classes.root} spacing={2}>
           <Grid item xs={12}>
-            <Typography
-              variant='h2'
-              component='h2'
-              gutterBottom
-              className={classes.heading}
-              align='center'
-            >
-              HTML5
-            </Typography>
+            <div style={{ width: '100%', height: '100px' }}>
+              <Typography
+                variant='h2'
+                component='h2'
+                gutterBottom
+                className={classes.heading}
+                align='center'
+              >
+                <RouterLink to='html' className={classes.routerLinkStyle}>
+                  HTML
+                </RouterLink>
+              </Typography>
+            </div>
             <Typography
               align='center'
               variant='body2'
@@ -72,6 +81,7 @@ const Home = () => {
                   category='VIDEOS'
                   title='YouTube Videos'
                   description='HTML tutorials from YouTube'
+                  link='/html/videos'
                 />
               </Paper>
               <Paper className={classes.control} square={true}>
@@ -80,6 +90,7 @@ const Home = () => {
                   category='ARTICLES'
                   title='Articles from the Web'
                   description='HTML articles from around the web'
+                  link='/html/articles'
                 />
               </Paper>
               <Paper className={classes.control} square={true}>
@@ -88,6 +99,7 @@ const Home = () => {
                   category='COURSES'
                   title='Free Courses'
                   description='HTML guided courses'
+                  link='/html/courses'
                 />
               </Paper>
             </Grid>
@@ -98,7 +110,7 @@ const Home = () => {
               className={classes.heading}
               align='center'
             >
-              CSS3
+              CSS
             </Typography>
             <Typography
               align='center'
@@ -106,7 +118,7 @@ const Home = () => {
               color='textSecondary'
               paragraph={true}
             >
-              CSS3 (Cascading Style Sheets) is a style sheet language used for
+              CSS (Cascading Style Sheets) is a style sheet language used for
               describing the presentation of a document written in a markup
               language like HTML.
             </Typography>
@@ -127,6 +139,7 @@ const Home = () => {
                   category='VIDEOS'
                   title='YouTube Videos'
                   description='CSS tutorials from YouTube'
+                  link='/css/videos'
                 />
               </Paper>
               <Paper className={classes.control} square={true}>
@@ -135,6 +148,7 @@ const Home = () => {
                   category='ARTICLES'
                   title='Articles from the Web'
                   description='CSS articles from around the web'
+                  link='/css/articles'
                 />
               </Paper>
               <Paper className={classes.control} square={true}>
@@ -143,6 +157,7 @@ const Home = () => {
                   category='COURSES'
                   title='Free Courses'
                   description='CSS guided courses'
+                  link='/css/courses'
                 />
               </Paper>
             </Grid>
@@ -182,6 +197,7 @@ const Home = () => {
                   category='VIDEOS'
                   title='YouTube Videos'
                   description='JavaScript tutorials from YouTube'
+                  link='/javascript/videos'
                 />
               </Paper>
               <Paper className={classes.control} square={true}>
@@ -190,6 +206,7 @@ const Home = () => {
                   category='ARTICLES'
                   title='Articles from the Web'
                   description='JavaScript articles from around the web'
+                  link='/javascript/articles'
                 />
               </Paper>
               <Paper className={classes.control} square={true}>
@@ -198,6 +215,7 @@ const Home = () => {
                   category='COURSES'
                   title='Free Courses'
                   description='JavaScript guided courses'
+                  link='/javascript/courses'
                 />
               </Paper>
             </Grid>
