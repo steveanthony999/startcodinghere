@@ -42,19 +42,17 @@ const Home = () => {
       <Container maxWidth='lg'>
         <Grid container className={classes.root} spacing={2}>
           <Grid item xs={12}>
-            <div style={{ width: '100%', height: '100px' }}>
-              <Typography
-                variant='h2'
-                component='h2'
-                gutterBottom
-                className={classes.heading}
-                align='center'
-              >
-                <RouterLink to='html' className={classes.routerLinkStyle}>
-                  HTML
-                </RouterLink>
-              </Typography>
-            </div>
+            <Typography
+              variant='h2'
+              component='h2'
+              gutterBottom
+              className={classes.heading}
+              align='center'
+            >
+              <RouterLink to='html' className={classes.routerLinkStyle}>
+                HTML
+              </RouterLink>
+            </Typography>
             <Typography
               align='center'
               variant='body2'
@@ -79,7 +77,6 @@ const Home = () => {
                 <Card
                   className={classes.paper}
                   category='VIDEOS'
-                  title='YouTube Videos'
                   description='HTML tutorials from YouTube'
                   link='/html/videos'
                 />
@@ -88,7 +85,6 @@ const Home = () => {
                 <Card
                   className={classes.paper}
                   category='ARTICLES'
-                  title='Articles from the Web'
                   description='HTML articles from around the web'
                   link='/html/articles'
                 />
@@ -97,7 +93,6 @@ const Home = () => {
                 <Card
                   className={classes.paper}
                   category='COURSES'
-                  title='Free Courses'
                   description='HTML guided courses'
                   link='/html/courses'
                 />
@@ -137,7 +132,6 @@ const Home = () => {
                 <Card
                   className={classes.paper}
                   category='VIDEOS'
-                  title='YouTube Videos'
                   description='CSS tutorials from YouTube'
                   link='/css/videos'
                 />
@@ -146,7 +140,6 @@ const Home = () => {
                 <Card
                   className={classes.paper}
                   category='ARTICLES'
-                  title='Articles from the Web'
                   description='CSS articles from around the web'
                   link='/css/articles'
                 />
@@ -155,7 +148,6 @@ const Home = () => {
                 <Card
                   className={classes.paper}
                   category='COURSES'
-                  title='Free Courses'
                   description='CSS guided courses'
                   link='/css/courses'
                 />
@@ -195,7 +187,6 @@ const Home = () => {
                 <Card
                   className={classes.paper}
                   category='VIDEOS'
-                  title='YouTube Videos'
                   description='JavaScript tutorials from YouTube'
                   link='/javascript/videos'
                 />
@@ -204,7 +195,6 @@ const Home = () => {
                 <Card
                   className={classes.paper}
                   category='ARTICLES'
-                  title='Articles from the Web'
                   description='JavaScript articles from around the web'
                   link='/javascript/articles'
                 />
@@ -213,7 +203,6 @@ const Home = () => {
                 <Card
                   className={classes.paper}
                   category='COURSES'
-                  title='Free Courses'
                   description='JavaScript guided courses'
                   link='/javascript/courses'
                 />
