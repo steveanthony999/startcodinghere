@@ -26,10 +26,6 @@ const useStyles = makeStyles({
   pos: {
     marginBottom: 12,
   },
-  buttonStyle: {
-    display: 'block',
-    width: '100%',
-  },
   linkStyle: {
     textDecoration: 'none',
     width: '100%',
@@ -57,9 +53,9 @@ export default function OutlinedCard(props) {
         <Link to={props.link} className={classes.linkStyle}>
           <Button
             size='large'
-            variant='outlined'
+            variant='contained'
             color='primary'
-            className={classes.buttonStyle}
+            fullWidth={true}
           >
             Let's Go!
           </Button>

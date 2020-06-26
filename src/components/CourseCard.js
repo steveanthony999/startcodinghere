@@ -13,6 +13,7 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
+    borderRadius: 0,
   },
   bullet: {
     display: 'inline-block',
@@ -24,11 +25,6 @@ const useStyles = makeStyles({
   },
   pos: {
     marginBottom: 12,
-  },
-  buttonStyle: {
-    display: 'block',
-    width: '100%',
-    textAlign: 'center',
   },
   linkStyle: {
     textDecoration: 'none',
@@ -56,21 +52,21 @@ export default function OutlinedCard(props) {
           className={classes.title}
           color='textSecondary'
           gutterBottom
-          variant='p'
+          variant='caption'
         >
           {props.author}
         </Typography>
       </CardContent>
       <CardActions>
         <Button
+          fullWidth={true}
           size='large'
-          variant='outlined'
-          color='primary'
-          className={classes.buttonStyle}
+          variant='contained'
+          color='secondary'
           href={props.href}
           target='_blank'
         >
-          Let's Go!
+          Add to Curriculum
         </Button>
       </CardActions>
     </Card>
